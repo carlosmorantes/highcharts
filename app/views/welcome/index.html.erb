@@ -1,0 +1,23 @@
+<h1>Welcome#index</h1> 
+<p>Find me in app/views/welcome/index.html.erb</p> 
+<h1>Spline Chart</h1> 
+
+<div id="container"> 
+
+</div> 
+
+<script > 
+  $(document).ready(function() { 
+    var options = { 
+        chart: { 
+            renderTo: 'container', 
+            type: 'spline' 
+        }, 
+        series: [{}] 
+    }; 
+    $.getJSON('/welcome/get_data/?factor=1', function(data) { 
+        options.series[0].data = data; 
+        var chart = new Highcharts.Chart(options); 
+    }); 
+  }); 
+</script> 
