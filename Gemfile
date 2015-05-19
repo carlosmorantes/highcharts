@@ -43,4 +43,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'highcharts-rails', '~> 4.1.5'
+
 
